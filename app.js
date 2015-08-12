@@ -8,11 +8,8 @@ var methodOverride = require('method-override');
 var urlencodedBodyParser = bodyParser.urlencoded({extended: false});
 
 app.use(express.static('public'));
-
 app.use(urlencodedBodyParser);
-
 app.use(methodOverride('_method'));
-
 app.set('view_engine', 'ejs');
 
 app.get('/', function(req,res){
@@ -21,6 +18,10 @@ app.get('/', function(req,res){
 
 app.get('/chesses', function(req,res){
   //get all the cheeses from the database and render them to an ejs file
+});
+
+app.post('/cheeses', function(req,res){
+  //add a new cheese to the data base and redirect to cheeses
 })
 
 app.listen(3000, function(){
