@@ -24,6 +24,10 @@ app.post('/cheeses', function(req,res){
   //add a new cheese to the data base and redirect to cheeses
 })
 
+app.put('/cheeses/:id', function(req,res){
+  //update an existing cheese, update the DB, render the show file
+})
+
 app.listen(3000, function(){
   console.log('listening on port 3000!')
 });
